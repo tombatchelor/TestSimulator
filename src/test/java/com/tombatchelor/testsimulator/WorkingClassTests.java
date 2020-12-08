@@ -26,6 +26,13 @@ public class WorkingClassTests {
         WorkingClass calculator = new WorkingClass();
         assertEquals(2, calculator.add(1, 1), "1 + 1 should equal 2");
     }
+    
+        @Test
+    @DisplayName("1 + 1 = 2")
+    void subtractTwoNumbers() {
+        WorkingClass calculator = new WorkingClass();
+        assertEquals(0, calculator.subtract(1, 1), "1 - 1 should equal 0");
+    }
 
     @ParameterizedTest(name = "{0} + {1} = {2}")
     @CsvSource({
