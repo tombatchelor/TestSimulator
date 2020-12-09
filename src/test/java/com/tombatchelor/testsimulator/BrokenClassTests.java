@@ -42,7 +42,7 @@ public class BrokenClassTests {
         "1,  100, 101"
     })
     void add(int first, int second, int expectedResult) {
-        BrokenClass calculator = new BrokenClass();
+        BrokenClass calculator = new BrokenClass(); 
         assertEquals(expectedResult, calculator.add(first, second),
                 () -> first + " + " + second + " should equal " + expectedResult);
     }
