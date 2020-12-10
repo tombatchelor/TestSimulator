@@ -19,7 +19,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 public class BrokenClassTests {
-
+/*
     @Test
     @DisplayName("1 + 1 = 2")
     void addsTwoNumbers() {
@@ -46,4 +46,5 @@ public class BrokenClassTests {
         assertEquals(expectedResult, calculator.add(first, second),
                 () -> first + " + " + second + " should equal " + expectedResult);
     }
+*/
 }
