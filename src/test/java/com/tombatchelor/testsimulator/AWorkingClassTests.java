@@ -18,7 +18,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-public class WorkingClassTests {
+public class AWorkingClassTests {
 
     @Test
     @DisplayName("1 + 1 = 2")
@@ -58,4 +58,6 @@ public class WorkingClassTests {
         assertEquals(expectedResult, calculator.toInt(input),
                 () -> input + " should equal " + expectedResult);
     }
+    
+    
 }

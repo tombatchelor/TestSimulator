@@ -5,12 +5,10 @@ package com.tombatchelor.testsimulator;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author tom_n
  */
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.DisplayName;
@@ -19,15 +17,15 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 public class BrokenClassTests {
-/*
+
     @Test
     @DisplayName("1 + 1 = 2")
     void addsTwoNumbers() {
         BrokenClass calculator = new BrokenClass();
         assertEquals(2, calculator.add(1, 1), "1 + 1 should equal 2");
     }
-    
-        @Test
+
+    @Test
     @DisplayName("1 + 1 = 2")
     void subtractTwoNumbers() {
         BrokenClass calculator = new BrokenClass();
@@ -42,9 +40,20 @@ public class BrokenClassTests {
         "1,  100, 101"
     })
     void add(int first, int second, int expectedResult) {
-        BrokenClass calculator = new BrokenClass(); 
+        BrokenClass calculator = new BrokenClass();
         assertEquals(expectedResult, calculator.add(first, second),
                 () -> first + " + " + second + " should equal " + expectedResult);
     }
-*/
+
+    @ParameterizedTest(name = "[0] = [1]")
+    @CsvSource({
+        "'1', 1",
+        "'3', 3",
+        "'10', 10"
+    })
+    void parse(String input, int expectedResult) {
+        BrokenClass calculator = new BrokenClass();
+        assertEquals(expectedResult, calculator.toInt(input),
+                () -> input + " should equal " + expectedResult);
+    }
 }
