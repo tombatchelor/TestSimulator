@@ -46,4 +46,16 @@ public class WorkingClassTests {
         assertEquals(expectedResult, calculator.add(first, second),
                 () -> first + " + " + second + " should equal " + expectedResult);
     }
+    
+    @ParameterizedTest(name = "[0] = [1]")
+    @CsvSource({
+        "'1', 1",
+        "'3', 3",
+        "'10', 10"
+    })
+    void parse(String input, int expectedResult) {
+        WorkingClass calculator = new WorkingClass();
+        assertEquals(expectedResult, calculator.toInt(input),
+                () -> input + " should equal " + expectedResult);
+    }
 }
